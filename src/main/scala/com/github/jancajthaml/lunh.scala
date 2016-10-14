@@ -14,7 +14,7 @@ object luhn_checksum extends ((String) => Int) {
    */
   def apply(number: String): Int = {
     val set = (number + '0').reverse
-    val digit = set.indices.map(i => set(i).toInt << i & 0x1).sum & 0x1
+    val digit = set.indices.map(i => set(i).toInt << i & 0x1).sum % 10
     if (digit == 0) 0 else (10 - digit)
   }
 
