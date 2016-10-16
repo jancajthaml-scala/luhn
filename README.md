@@ -1,5 +1,7 @@
-Performant and straight-forward implementation of luhn checksum algorithm
+## Performant implementation of Luhn checksum algorithm
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d991ff72a806434184dfd5b756fd0fd4)](https://www.codacy.com/app/jan-cajthaml/luhn?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jancajthaml-scala/luhn&amp;utm_campaign=Badge_Grade) [![Build Status](https://travis-ci.org/jancajthaml-scala/luhn.svg?branch=master)](https://travis-ci.org/jancajthaml-scala/luhn)
 
-@see https://en.wikipedia.org/wiki/Luhn_algorithm
+Algorithm will detect any single-digit error, as well as almost all transpositions of adjacent digits. It will not, however, detect transposition of the two-digit sequence 09 to 90 (or vice versa). It is not intended to be a cryptographically secure hash function. It is mostly used for pre-flight credit card number validation (last digit is Luhn Checksum) as specified in [ISO/IEC 7812-1:2015](http://www.iso.org/iso/catalogue_detail?csnumber=66011)
+
+##### for more details see https://en.wikipedia.org/wiki/Luhn_algorithm
