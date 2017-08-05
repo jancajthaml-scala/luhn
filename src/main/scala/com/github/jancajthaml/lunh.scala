@@ -7,7 +7,7 @@ package com.github.jancajthaml
   *
   * @author jan.cajthaml
   */
-object luhn_checksum extends ((String) => Int) {
+object luhn_checksum extends Function1[String, Int] {
 
   /**
    * @return check_digit
@@ -17,5 +17,4 @@ object luhn_checksum extends ((String) => Int) {
     val digit = set.indices.map(i => set(i).toInt << i & 0x1).sum % 10
     if (digit == 0) 0 else (10 - digit)
   }
-
 }
