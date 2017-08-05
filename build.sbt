@@ -1,6 +1,6 @@
 import sbt.Keys._
 
-name := "uuid"
+name := "luhn"
 
 organization := "jan.cajthaml"
 
@@ -82,4 +82,3 @@ lazy val test = Project(
     logBuffered := false
   )
 )
-
